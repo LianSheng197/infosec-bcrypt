@@ -11,6 +11,10 @@ const saltRounds = 12;
 const myPlaintextPassword = 'sUperpassw0rd!';
 const someOtherPlaintextPassword = 'pass123';
 
+app.get("/", (req, res) => {
+    res.send("Damn it, CloudFlare cached my old content. <br>Even if I changed the settings still fails the freeCodeCamp test...");
+})
+
 
 //START_ASYNC -do not remove notes, place code between correct pair of notes.
 
@@ -53,4 +57,4 @@ const someOtherPlaintextPassword = 'pass123';
 
 
 
-app.listen(process.env.PORT || 60001, () => { });
+app.listen(process.env.PORT || 60002, () => { });
